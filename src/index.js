@@ -1,13 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
+import SearchForm from "./SearchForm";
+import Weather from "./Weather";
+import Footer from "./Footer";
+import "./weather.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <div className="App">
+      <p>Daily weather</p>
+      <SearchForm />
+      <Weather />
+      <br />
+      <br />
+      <br />
+    </div>
+    <Footer />
   </React.StrictMode>
 );
 
