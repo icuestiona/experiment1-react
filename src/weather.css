@@ -5,6 +5,12 @@ body {
   border-radius: 15px;
   border: 1px solid white;
   box-shadow: #d4d4d4 0px 0px 10px;
+  background-image: url("./images/Clouds.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: block;
+  padding: 40px;
 }
 
 .searchForm {

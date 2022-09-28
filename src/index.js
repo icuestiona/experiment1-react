@@ -1,21 +1,21 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-import SearchForm from "./SearchForm";
-import Weather from "./Weather";
-import Footer from "./Footer";
+import "./index.css";
 import "./weather.css";
+import App from "./App";
+import cloudsPicture from "./images/Clouds.jpg";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <div className="App">
-      <p>Daily weather</p>
-      <SearchForm />
-      <Weather />
-    </div>
-    <Footer />
+    <section className="main-container" alt="pink and blue clouds">
+      <div className="background-img">
+        <img src={cloudsPicture} alt="" />
+        <App />
+      </div>
+    </section>
   </React.StrictMode>
 );
 

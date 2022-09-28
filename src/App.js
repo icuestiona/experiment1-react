@@ -1,14 +1,19 @@
+import React from "react";
+import SearchForm from "./SearchForm";
+import Weather from "./Weather";
+import Footer from "./Footer";
+import "./weather.css";
 import "./App.css";
 
-const cloudsPicture = new URL("./images/Clouds.jpg", import.meta.url);
-
-function App() {
+export default function App() {
   return (
-    <section className="main-container" alt="pink and blue clouds">
-      <div className="clouds-pic">
-        <img src={cloudsPicture} />
+    <div className="App">
+      <div className="container">
+        <p>Daily weather</p>
+        <SearchForm />
+        <Weather defaultCity="Madrid" />
       </div>
-    </section>
+      <Footer />
+    </div>
   );
 }
-export default App;
