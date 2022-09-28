@@ -14,9 +14,6 @@ root.render(
       <p>Daily weather</p>
       <SearchForm />
       <Weather />
-      <br />
-      <br />
-      <br />
     </div>
     <Footer />
   </React.StrictMode>

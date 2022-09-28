@@ -15,13 +15,11 @@ export default function SearchForm() {
               autoFocus="off"
               autoComplete="off"
             />
-
             <input
               type="submit"
               value="search"
               className="col-3 btn btn-primary shadow.sm"
             />
-
             <button
               type="button"
               value="current"
