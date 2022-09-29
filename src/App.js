@@ -1,5 +1,4 @@
 import React from "react";
-import SearchForm from "./SearchForm";
 import Weather from "./Weather";
 import Footer from "./Footer";
 import "./weather.css";
@@ -10,7 +9,6 @@ export default function App() {
     <div className="App">
       <div className="container">
         <p>Daily weather</p>
-        <SearchForm />
         <Weather defaultCity="Madrid" />
       </div>
       <Footer />

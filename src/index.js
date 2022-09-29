@@ -4,17 +4,13 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import "./weather.css";
 import App from "./App";
-import cloudsPicture from "./images/Clouds.jpg";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 root.render(
   <React.StrictMode>
     <section className="main-container" alt="pink and blue clouds">
-      <div className="background-img">
-        <img src={cloudsPicture} alt="" />
-        <App />
-      </div>
+      <App />
     </section>
   </React.StrictMode>
 );
