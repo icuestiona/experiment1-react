@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./weather.css";
 import "./App";
+import FormatDate from "./FormatDate";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
@@ -18,6 +19,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -46,9 +48,9 @@ export default function Weather(props) {
     return (
       <div className="weather">
         <div className="app-container">
-          <div className="row-2">
-            <div className="col-9">
-              <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}>
+            <div className="row-2">
+              <div className="col-9">
                 <input
                   type="search"
                   className="form-control search search-bar"
@@ -70,9 +72,9 @@ export default function Weather(props) {
                 >
                   Current location
                 </button>
-              </form>
+              </div>
             </div>
-          </div>
+          </form>
           <div className="card mb-3">
             <div className="row g-0">
               <div className="col-md-4">
@@ -98,8 +100,10 @@ export default function Weather(props) {
                     ºF
                   </a>
                   <br />
+                  <h3 id="date-input">
+                    <FormatDate date={weather.date} />
+                  </h3>
                   <h5 id="temp-description">{weather.description}</h5>
-                  <h3 id="date-input">Thursday 16:00</h3>
                 </div>
               </div>
             </div>
