@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="footer">
       <div className="coder">
         <a
-          href="https://github.com/icuestiona/vanilla-weather-app"
+          href="https://github.com/icuestiona/experiment1-react"
           target="_blank"
           rel="noreferrer"
         >
@@ -14,7 +14,7 @@ export default function Footer() {
         </a>
         by Soraya Carvajal and hosted on{" "}
         <a
-          href="https://gleeful-vacherin-d63ffc.netlify.app/"
+          href="https://glittering-zuccutto-7fa046.netlify.app/"
           target="_blank"
           rel="noreferrer"
         >
