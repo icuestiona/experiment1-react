@@ -3,6 +3,7 @@ import axios from "axios";
 import "./weather.css";
 import "./App";
 import FormatDate from "./FormatDate";
+import WeatherTemp from "./WeatherTemp";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
@@ -20,6 +21,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000),
+      feelsLike: Math.round(response.data.main.feels_like),
     });
   }
 
@@ -89,16 +91,12 @@ export default function Weather(props) {
                 <div className="card-body">
                   <h1 id="city">{weather.city}</h1>
                   <br />
-                  <h2 className="temperature">
-                    <span id="temperature">{weather.temperature}º</span>
+                  <h2 className="weather-temp">
+                    <span id="weather-temp">
+                      <WeatherTemp celsius={weather.temperature} />
+                    </span>
                   </h2>
-                  <a href=" " id="celsius-link" class="active" rel="noreferrer">
-                    ºC
-                  </a>{" "}
-                  |
-                  <a href=" " id="fahrenheit-link" rel="noreferrer">
-                    ºF
-                  </a>
+
                   <br />
                   <h3 id="date-input">
                     <FormatDate date={weather.date} />
@@ -115,7 +113,7 @@ export default function Weather(props) {
             <br />
             💨
             <br />
-            <span id="wind">{weather.wind}</span>m/sec
+            <span id="wind">{Math.round(weather.wind)}</span>km/h
           </div>
           <div className="col-4">
             <strong>Humidity</strong>
@@ -129,7 +127,7 @@ export default function Weather(props) {
             <br />
             🌅
             <br />
-            <span id="feelsLike"></span>ºC
+            <span id="feelsLike">{weather.feelsLike}</span>ºC
           </div>
         </div>
       </div>

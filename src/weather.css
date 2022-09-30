@@ -14,6 +14,8 @@
 }
 
 .search-bar {
+  background: #f2f2f1;
+  border: none;
   padding: 10px;
   position: relative;
   margin-top: -10px;
@@ -71,9 +73,9 @@
   align-items: center;
 }
 
-.card-body h2 {
+.degrees {
   font-family: "Roboto", sans-serif;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bolder;
 }
 
@@ -134,4 +136,7 @@ img {
 }
 .active:hover {
   text-decoration: none;
+}
+.degreeClickers {
+  font-size: 20px;
 }
