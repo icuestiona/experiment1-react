@@ -19,6 +19,9 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
+      feelsLike: response.data.main.feels_like,
+      sunrise: response.data.sys.sunrise,
+      sunset: response.data.sys.sunset,
     });
   }
 
@@ -37,6 +40,15 @@ export default function Weather(props) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
+  function retrievePosition(position) {
+    let apiKey = `ec906dafd44a254d26b9dd410c431070`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function showLocation() {
+    navigator.geolocation.getCurrentPosition(retrievePosition);
+  }
 
   if (weather.ready) {
     return (
@@ -54,6 +66,13 @@ export default function Weather(props) {
             </div>
             <div className="col-3">
               <input type="submit" value="Search" className="btn btn-primary" />
+              <button
+                type="button"
+                className="btn btn-light shadow-sm"
+                onClick={showLocation}
+              >
+                <i className="bi bi-geo-alt-fill"></i>
+              </button>
             </div>
           </div>
         </form>

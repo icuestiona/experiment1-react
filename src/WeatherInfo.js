@@ -4,6 +4,38 @@ import WeatherTemp from "./WeatherTemp";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
+  function sunrise() {
+    let date = new Date(props.data.sunrise * 1000);
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+
+    if (hours < 10) {
+      hours = `0${hours}`;
+    }
+
+    if (minutes < 10) {
+      minutes = `0${minutes}`;
+    }
+
+    return (
+      <span>
+        {hours}:{minutes}
+      </span>
+    );
+  }
+
+  function sunset() {
+    let date = new Date(props.data.sunset * 1000);
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+
+    return (
+      <span>
+        {hours}:{minutes}
+      </span>
+    );
+  }
+
   return (
     <div className="WeatherInfo">
       <h1>{props.data.city}</h1>
@@ -12,7 +44,10 @@ export default function WeatherInfo(props) {
           <FormatDate date={props.data.date} />
         </li>
         <li className="text-capitalize">{props.data.description}</li>
+        <li>Sunrise: {sunrise()}</li>
+        <li>Sunset: {sunset()}</li>
       </ul>
+
       <div className="row mt-3">
         <div className="col-6">
           <div className="clearfix">
@@ -33,6 +68,7 @@ export default function WeatherInfo(props) {
         <div className="col-6">
           <div className="details">
             <ul>
+              <li>Feels: {Math.round(props.data.feelsLike)}°C</li>
               <li>Humidity: {props.data.humidity}%</li>
               <li>Wind: {Math.round(props.data.wind)} Km/h</li>
             </ul>

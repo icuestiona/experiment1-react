@@ -33,7 +33,7 @@ input[type="text"] {
 }
 
 ul {
-  margin-top: 10px;
+  margin-top: -10px;
   padding: 0;
 }
 
@@ -44,6 +44,7 @@ li {
   line-height: 20px;
   list-style: none;
   color: #0c732b;
+  letter-spacing: 0, 5px;
 }
 .Weather canvas {
   margin: 0 auto;
@@ -66,8 +67,13 @@ img {
 
 .btn {
   border-radius: 2px;
-  color: #fff;
-  height: 44px;
+  margin-left: 5px;
+  height: 40px;
+}
+.btn-primary {
+  margin-left: -15px;
+  border-radius: 3px;
+  border: 1px solid white;
 }
 
 .Weather .unit {
