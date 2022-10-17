@@ -14,7 +14,7 @@ export default function Footer() {
         </a>
         by Soraya Carvajal and hosted on{" "}
         <a
-          href="https://glittering-zuccutto-7fa046.netlify.app/"
+          href="https://sage-queijadas-9e8532.netlify.app/"
           target="_blank"
           rel="noreferrer"
         >
