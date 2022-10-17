@@ -3,6 +3,7 @@ import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./weather.css";
+import { HiLocationMarker } from "react-icons/fa";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
