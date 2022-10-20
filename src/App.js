@@ -9,21 +9,29 @@ export default function App() {
         <Weather defaultCity="Madrid" />
         <footer>
           <small>
-            This project was coded by{" "}
+            Coded by{" "}
             <a
-              href="https://stellar-donut-875afe.netlify.app/about.html"
+              href="https://stellar-donut-875afe.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
               Soraya Carvajal
             </a>{" "}
-            and is {""}
+            , open-sourced on{" "}
             <a
-              href="https://github.com/icuestiona/react-weather-app"
+              href="https://github.com/icuestiona/experiment1-react"
               target="_blank"
               rel="noreferrer"
             >
-              open-sourced on Github
+              Github
+            </a>{" "}
+            and hosted on{" "}
+            <a
+              href="https://sage-queijadas-9e8532.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Netlify
             </a>
           </small>
         </footer>
