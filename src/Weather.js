@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+
 import "./weather.css";
 
 export default function Weather(props) {
@@ -71,7 +74,9 @@ export default function Weather(props) {
                 className="btn btn-light shadow-sm"
                 onClick={showLocation}
               >
-                <i className="bi bi-geo-alt-fill"></i>
+                <span>
+                  <FontAwesomeIcon icon={faLocationDot} />
+                </span>
               </button>
             </div>
           </div>

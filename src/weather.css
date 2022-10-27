@@ -37,15 +37,29 @@ ul {
   padding: 0;
 }
 
-li {
+.data {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: 100;
   line-height: 20px;
   list-style: none;
-  color: #0c732b;
+  color: #394e11;
   letter-spacing: 0, 5px;
+  margin-left: 10px;
 }
+
+.details {
+  margin-top: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 20px;
+  list-style: none;
+  color: #143a4b;
+  letter-spacing: 0, 5px;
+  margin-left: 40px;
+}
+
 .Weather canvas {
   margin: 0 auto;
   margin-left: 10px;
@@ -65,15 +79,13 @@ img {
   margin-top: -0;
 }
 
-.btn {
+.btn-light {
   border-radius: 2px;
   margin-left: 5px;
-  height: 40px;
 }
 .btn-primary {
   margin-left: -15px;
   border-radius: 3px;
-  border: 1px solid white;
 }
 
 .Weather .unit {
@@ -97,10 +109,6 @@ img {
 footer {
   margin-top: 90px;
   color: #080808;
-}
-
-.details {
-  margin-top: 30px;
 }
 
 @media (max-width: 500px) {
